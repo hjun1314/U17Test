@@ -1,2 +1,2 @@
 # U17Test
-U17Test Contact Swift the project
+U17Test Practice Swift project
