@@ -1,14 +1,14 @@
 //
-//  communityVC.swift
+//  NavViewController.swift
 //  U17Test
 //
-//  Created by hjun on 2020/9/1.
+//  Created by hjun on 2020/9/2.
 //  Copyright © 2020 hjun. All rights reserved.
 //
 
 import UIKit
 
-class communityVC: UIViewController {
+class NavViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
