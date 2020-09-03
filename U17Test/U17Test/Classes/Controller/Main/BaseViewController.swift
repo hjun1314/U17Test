@@ -7,24 +7,48 @@
 //
 
 import UIKit
-
+import SnapKit
+import Then
+import Reusable
+import Kingfisher
 class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.background
+        setupLayout()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configNavBar()
     }
-    */
+    
+    func setupLayout() {}
 
+    
+    func configNavBar()  {
+        guard let navi = navigationController else {
+            return
+        }
+        if  navi.visibleViewController == self {
+            navi.barStyle(.theme)
+            navi.disablePopGesture = false
+            navi.setNavigationBarHidden(false, animated: true)
+            if navi.viewControllers.count > 1 {
+                navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backGreen"), target: self, action: #selector(pressBack))
+            }
+        }
+    }
+    @objc func pressBack() {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
+extension BaseViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+}
+
