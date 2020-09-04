@@ -24,7 +24,7 @@ class TabbarController: UITabBarController {
         let homeVc = homeVC()
         addChildController(childController: homeVc, title: "发现", image: UIImage(named: "tab_find"), selectImage: UIImage(named: "tab_find_selected"))
 
-        let bookSegmentVc = BookrackVC()
+        let bookSegmentVc = BookrackVC(titles: ["收藏","书单","历史","下载"], vcs: [collectionVC(),bookListVC(),historyVC(),downLoadVC()], segmentStyle: .navgationBarSegment)
         addChildController(childController: bookSegmentVc, title: "书架", image: UIImage(named: "tab_book"), selectImage: UIImage(named: "tab_book_selected"))
 
         let mineVc = mineVC()

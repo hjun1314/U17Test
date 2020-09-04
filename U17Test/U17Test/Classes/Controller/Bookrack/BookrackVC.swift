@@ -8,14 +8,21 @@
 
 import UIKit
 
-class BookrackVC: BaseViewController {
+class BookrackVC: SegmentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .default
+    }
+    override func configNavBar() {
+        super.configNavBar()
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.barStyle(.clear)
+        
+    }
 
     
 
