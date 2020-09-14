@@ -53,6 +53,12 @@
 		F0ADDDFE24FE223A001A17AA /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADDDFD24FE223A001A17AA /* homeVC.swift */; };
 		F0ADDE0024FE2248001A17AA /* mineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADDDFF24FE2248001A17AA /* mineVC.swift */; };
 		F0ADDE0224FE2387001A17AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADDE0124FE2387001A17AA /* BaseViewController.swift */; };
+		F0B034072501CC49009596F2 /* downLoadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B034062501CC49009596F2 /* downLoadVC.swift */; };
+		F0B034092501CC7B009596F2 /* bookListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B034082501CC7B009596F2 /* bookListVC.swift */; };
+		F0B0340B2501CC8F009596F2 /* historyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0340A2501CC8F009596F2 /* historyVC.swift */; };
+		F0B0340D2501CCD3009596F2 /* collectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0340C2501CCD3009596F2 /* collectionVC.swift */; };
+		F0B0340F2501CF05009596F2 /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0340E2501CF05009596F2 /* SegmentViewController.swift */; };
+		F0B034112501E8B4009596F2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B034102501E8B4009596F2 /* Model.swift */; };
 		F0E2993424FF348F00AC773B /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2993324FF348F00AC773B /* NavViewController.swift */; };
 		F0E2993A24FF68BB00AC773B /* CommunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E2993924FF68BB00AC773B /* CommunityVC.swift */; };
 /* End PBXBuildFile section */
@@ -129,6 +135,12 @@
 		F0ADDDFD24FE223A001A17AA /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 		F0ADDDFF24FE2248001A17AA /* mineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mineVC.swift; sourceTree = "<group>"; };
 		F0ADDE0124FE2387001A17AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F0B034062501CC49009596F2 /* downLoadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = downLoadVC.swift; sourceTree = "<group>"; };
+		F0B034082501CC7B009596F2 /* bookListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookListVC.swift; sourceTree = "<group>"; };
+		F0B0340A2501CC8F009596F2 /* historyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyVC.swift; sourceTree = "<group>"; };
+		F0B0340C2501CCD3009596F2 /* collectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionVC.swift; sourceTree = "<group>"; };
+		F0B0340E2501CF05009596F2 /* SegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
+		F0B034102501E8B4009596F2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = U17Test/Classes/Controller/Main/Model.swift; sourceTree = SOURCE_ROOT; };
 		F0E2993324FF348F00AC773B /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		F0E2993924FF68BB00AC773B /* CommunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,6 +276,7 @@
 		F0ADDD9924FDF0F8001A17AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0B034102501E8B4009596F2 /* Model.swift */,
 			);
 			name = Model;
 			path = U17Test/Model;
@@ -422,6 +435,7 @@
 				F0ADDDF724FE20F1001A17AA /* TabbarController.swift */,
 				F0ADDE0124FE2387001A17AA /* BaseViewController.swift */,
 				F0E2993324FF348F00AC773B /* NavViewController.swift */,
+				F0B0340E2501CF05009596F2 /* SegmentViewController.swift */,
 				F0ADDDF124FE1F93001A17AA /* BaseView */,
 			);
 			name = Main;
@@ -449,6 +463,10 @@
 			isa = PBXGroup;
 			children = (
 				F0ADDDFB24FE222D001A17AA /* BookrackVC.swift */,
+				F0B034062501CC49009596F2 /* downLoadVC.swift */,
+				F0B034082501CC7B009596F2 /* bookListVC.swift */,
+				F0B0340A2501CC8F009596F2 /* historyVC.swift */,
+				F0B0340C2501CCD3009596F2 /* collectionVC.swift */,
 			);
 			name = Bookrack;
 			path = U17Test/Classes/Controller/Bookrack;
@@ -641,10 +659,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B034112501E8B4009596F2 /* Model.swift in Sources */,
+				F0B0340F2501CF05009596F2 /* SegmentViewController.swift in Sources */,
 				F0ADDDC624FDF1A9001A17AA /* UCollectionViewAlignedLayout.swift in Sources */,
 				F0ADDDDC24FDF1A9001A17AA /* DispatchQueueExtension.swift in Sources */,
 				F018476224FCD04A0060132C /* ViewController.swift in Sources */,
 				F0E2993A24FF68BB00AC773B /* CommunityVC.swift in Sources */,
+				F0B034072501CC49009596F2 /* downLoadVC.swift in Sources */,
 				F0ADDDD824FDF1A9001A17AA /* UIViewExtension.swift in Sources */,
 				F0ADDDD324FDF1A9001A17AA /* LLFilledPageControl.swift in Sources */,
 				F0ADDE0224FE2387001A17AA /* BaseViewController.swift in Sources */,
@@ -661,6 +682,7 @@
 				F0ADDDFC24FE222D001A17AA /* BookrackVC.swift in Sources */,
 				F0ADDDC924FDF1A9001A17AA /* ParallaxHeaderMode.swift in Sources */,
 				F0ADDDE024FDF308001A17AA /* Global.swift in Sources */,
+				F0B0340D2501CCD3009596F2 /* collectionVC.swift in Sources */,
 				F07CD31025007C59008EED00 /* API.swift in Sources */,
 				F0ADDE0024FE2248001A17AA /* mineVC.swift in Sources */,
 				F07CD315250084E6008EED00 /* mineCell.swift in Sources */,
@@ -669,10 +691,12 @@
 				F0E2993424FF348F00AC773B /* NavViewController.swift in Sources */,
 				F0ADDDC524FDF1A9001A17AA /* UHairPowder.swift in Sources */,
 				F0ADDDD624FDF1A9001A17AA /* ArrayExtensions.swift in Sources */,
+				F0B0340B2501CC8F009596F2 /* historyVC.swift in Sources */,
 				F0ADDDCE24FDF1A9001A17AA /* LLViewExtensions.swift in Sources */,
 				F0ADDDD124FDF1A9001A17AA /* LLSnakePageControl.swift in Sources */,
 				F0ADDDDE24FDF1A9001A17AA /* DictionaryExtension.swift in Sources */,
 				F0ADDDDB24FDF1A9001A17AA /* UIImageExtensions.swift in Sources */,
+				F0B034092501CC7B009596F2 /* bookListVC.swift in Sources */,
 				F0ADDDCB24FDF1A9001A17AA /* ParallaxHeader.swift in Sources */,
 				F0ADDDD424FDF1A9001A17AA /* LLImagePageControl.swift in Sources */,
 				F0ADDDC724FDF1A9001A17AA /* UCollectionViewSectionBackgroundLayout.swift in Sources */,

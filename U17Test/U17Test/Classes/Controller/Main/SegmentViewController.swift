@@ -27,26 +27,26 @@ class SegmentViewController: BaseViewController, UIPageViewControllerDelegate, U
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let index = vcs.firstIndex(of: viewController) else { return nil }
-               let afterIndex = index + 1
-               guard afterIndex <= vcs.count - 1 else { return nil }
-               return vcs[afterIndex]
-
+        let afterIndex = index + 1
+        guard afterIndex <= vcs.count - 1 else { return nil }
+        return vcs[afterIndex]
+        
     }
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         guard let viewController = pageViewController.viewControllers?.last,
-                let index = vcs.firstIndex(of: viewController) else {
-                    return
-            }
-            currentSelectIndex = index
-            segment.setSelectedSegmentIndex(UInt(index), animated: true)
-            guard titles != nil && segmentStyle == Optional.none else { return }
-            navigationItem.title = titles[index]
+            let index = vcs.firstIndex(of: viewController) else {
+                return
+        }
+        currentSelectIndex = index
+        segment.setSelectedSegmentIndex(UInt(index), animated: true)
+        guard titles != nil && segmentStyle == Optional.none else { return }
+        navigationItem.title = titles[index]
     }
     
     var segmentStyle : SegmentStyle!
     lazy var segment : HMSegmentedControl = {
         return HMSegmentedControl().then { $0.addTarget(self, action: #selector(changeIndex(segment:)), for: .valueChanged)
-        
+            
         }
     }()
     
@@ -80,7 +80,7 @@ class SegmentViewController: BaseViewController, UIPageViewControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func setupLayout() {
@@ -90,7 +90,7 @@ class SegmentViewController: BaseViewController, UIPageViewControllerDelegate, U
         pageVc.delegate = self
         pageVc.dataSource = self
         pageVc.setViewControllers([vcs[0]], direction: .forward, animated: false, completion: nil)
-    
+        
         switch  segmentStyle {
         case .none?:
             pageVc.view.snp.makeConstraints { (make) in
@@ -101,7 +101,7 @@ class SegmentViewController: BaseViewController, UIPageViewControllerDelegate, U
             segment.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black,
                                            NSAttributedString.Key.font:UIFont.systemFont(ofSize: 18)]
             segment.selectedTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black,
-            NSAttributedString.Key.font:UIFont.systemFont(ofSize: 28)]
+                                                   NSAttributedString.Key.font:UIFont.systemFont(ofSize: 28)]
             
             segment.selectionIndicatorLocation = .none
             segment.backgroundColor = .white
@@ -133,13 +133,13 @@ class SegmentViewController: BaseViewController, UIPageViewControllerDelegate, U
                 $0.top.equalTo(segment.snp.bottom)
                 $0.left.right.bottom.equalToSuperview()
             }
-            default: break
-
+        default: break
+            
         }
         guard let titles = titles else {return}
         segment.sectionTitles = titles
         currentSelectIndex = 0
         segment.selectedSegmentIndex = UInt(currentSelectIndex)
     }
-
+    
 }
